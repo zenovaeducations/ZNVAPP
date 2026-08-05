@@ -2,6 +2,10 @@
 // ZENOVA EDUCATIONS
 // Splash Screen
 // ===============================
+// ==========================================
+// ZENOVA EDUCATIONS
+// Splash Screen
+// ==========================================
 
 import { auth, db } from "../firebase/firebase-config.js";
 
@@ -14,49 +18,81 @@ import {
     getDoc
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
-
-// Wait 2.5 seconds before redirecting
+// Wait for splash animation
 setTimeout(() => {
 
     onAuthStateChanged(auth, async (user) => {
 
-        // User NOT Logged In
-        if (!user) {
-
-            window.location.href = "../login/";
-
-            return;
-
-        }
-
         try {
 
-            // Check if student profile exists
+            // --------------------------------
+            // User Not Logged In
+            // --------------------------------
+
+            if (!user) {
+
+                window.location.replace("../login/");
+                return;
+
+            }
+
+            // --------------------------------
+            // Check Student Record
+            // --------------------------------
+
             const studentRef = doc(db, "students", user.uid);
 
             const studentSnap = await getDoc(studentRef);
 
-            // Registered Student
-            if (studentSnap.exists()) {
+            // Student not registered
 
-                window.location.href = "../dashboard/";
+            if (!studentSnap.exists()) {
 
-            }
-
-            // Logged In But Registration Pending
-            else {
-
-                window.location.href = "../register/";
+                window.location.replace("../register/");
+                return;
 
             }
 
-        }
+            const student = studentSnap.data();
 
-        catch (error) {
+            // --------------------------------
+            // Approval Status
+            // --------------------------------
 
-            console.error(error);
+            switch (student.approvalStatus) {
 
-            alert("Something went wrong. Please try again.");
+                case "approved":
+
+                    window.location.replace("../dashboard/");
+                    break;
+
+                case "pending":
+
+                    window.location.replace("../waiting/");
+                    break;
+
+                case "rejected":
+
+                    window.location.replace("../rejected/");
+                    break;
+
+                case "blocked":
+
+                    window.location.replace("../blocked/");
+                    break;
+
+                default:
+
+                    window.location.replace("../waiting/");
+                    break;
+
+            }
+
+        } catch (error) {
+
+            console.error("Splash Error:", error);
+
+            alert("Unable to load application.");
 
         }
 
