@@ -1,0 +1,1656 @@
+/* ==========================================
+   ZENOVA EDUCATIONS
+   UNIVERSAL HOME
+========================================== */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --black: #000000;
+    --white: #ffffff;
+
+    --text: #111111;
+    --secondary: #737373;
+    --muted: #999999;
+
+    --background: #f7f7f7;
+
+    --border: #e7e7e7;
+
+    --light: #f0f0f0;
+
+}
+
+
+html {
+    font-size: 16px;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+/* ==========================================
+   APP
+========================================== */
+
+.app {
+
+    min-height: 100vh;
+
+    padding-bottom: 86px;
+
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.top-header {
+
+    height: 88px;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 22px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+
+.header-icon {
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    position: relative;
+
+}
+
+
+.header-icon svg {
+
+    width: 23px;
+    height: 23px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+}
+
+
+.brand {
+
+    text-align: center;
+
+    line-height: 1;
+
+}
+
+
+.brand-name {
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+}
+
+
+.brand-subtitle {
+
+    font-size: 8px;
+
+    letter-spacing: 5px;
+
+    color: #bdbdbd;
+
+    margin-top: 7px;
+
+}
+
+
+.notification-dot {
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    top: 8px;
+
+    right: 8px;
+
+    display: none;
+
+}
+
+
+/* ==========================================
+   MAIN
+========================================== */
+
+.main-content {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 28px 18px 45px;
+
+}
+
+
+/* ==========================================
+   GREETING
+========================================== */
+
+.greeting-section {
+
+    margin-bottom: 23px;
+
+}
+
+
+.greeting-small {
+
+    color: var(--secondary);
+
+    font-size: 14px;
+
+}
+
+
+.greeting-section h1 {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin-top: 1px;
+
+}
+
+
+.student-class {
+
+    font-size: 13px;
+
+    color: var(--secondary);
+
+    margin-top: 5px;
+
+}
+
+
+/* ==========================================
+   HERO CAROUSEL
+========================================== */
+
+.hero-section {
+
+    width: 100%;
+
+}
+
+
+.hero-carousel {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 8.2;
+
+    min-height: 190px;
+
+    max-height: 330px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #111111;
+
+}
+
+
+.hero-slide {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    transform: scale(1.02);
+
+    transition:
+
+        opacity .6s ease,
+
+        transform .8s ease;
+
+}
+
+
+.hero-slide.active {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    z-index: 2;
+
+}
+
+
+.hero-slide img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 24px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.78),
+            rgba(0,0,0,.20),
+            rgba(0,0,0,.02)
+        );
+
+}
+
+
+.hero-text {
+
+    color: white;
+
+    max-width: 60%;
+
+}
+
+
+.hero-text span {
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #d0d0d0;
+
+}
+
+
+.hero-text h2 {
+
+    margin-top: 7px;
+
+    font-size: clamp(22px, 5vw, 36px);
+
+    line-height: 1.12;
+
+    font-weight: 700;
+
+}
+
+
+.hero-button {
+
+    border: none;
+
+    background: white;
+
+    color: black;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    margin-top: 14px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+.hero-dots {
+
+    position: absolute;
+
+    z-index: 5;
+
+    left: 24px;
+
+    bottom: 16px;
+
+    display: flex;
+
+    gap: 5px;
+
+}
+
+
+.hero-dot {
+
+    width: 6px;
+    height: 6px;
+
+    border: none;
+
+    padding: 0;
+
+    background: rgba(255,255,255,.45);
+
+    border-radius: 20px;
+
+    transition: .3s;
+
+}
+
+
+.hero-dot.active {
+
+    width: 20px;
+
+    background: white;
+
+}
+
+
+/* ==========================================
+   SECTION
+========================================== */
+
+.section {
+
+    margin-top: 38px;
+
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+}
+
+
+.section-label {
+
+    font-size: 9px;
+
+    color: var(--muted);
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+}
+
+
+.section-heading h2 {
+
+    margin-top: 4px;
+
+    font-size: 21px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+}
+
+
+.view-all {
+
+    border: none;
+
+    background: transparent;
+
+    color: #555555;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+}
+
+
+/* ==========================================
+   QUICK ACCESS
+========================================== */
+
+.quick-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.quick-card {
+
+    border: 1px solid var(--border);
+
+    background: white;
+
+    border-radius: 17px;
+
+    padding: 15px;
+
+    min-height: 94px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
+}
+
+
+.quick-card:active {
+
+    transform: scale(.98);
+
+}
+
+
+.quick-icon {
+
+    width: 46px;
+    height: 46px;
+
+    min-width: 46px;
+
+    border-radius: 13px;
+
+    background: black;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.quick-icon svg {
+
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.6;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+}
+
+
+.quick-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.quick-content strong {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.quick-content span {
+
+    font-size: 9px;
+
+    color: var(--muted);
+
+}
+
+
+/* ==========================================
+   ANNOUNCEMENTS
+========================================== */
+
+.announcement-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+}
+
+
+.announcement-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 17px;
+
+    padding: 14px;
+
+}
+
+
+.announcement-date {
+
+    width: 47px;
+    min-width: 47px;
+
+    height: 54px;
+
+    border-radius: 12px;
+
+    background: black;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.announcement-date strong {
+
+    font-size: 17px;
+
+    line-height: 1;
+
+}
+
+
+.announcement-date span {
+
+    margin-top: 4px;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+    color: #bdbdbd;
+
+}
+
+
+.announcement-content {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.announcement-content > span {
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    color: #999999;
+
+}
+
+
+.announcement-content h3 {
+
+    font-size: 12px;
+
+    margin-top: 3px;
+
+}
+
+
+.announcement-content p {
+
+    font-size: 9px;
+
+    color: #888888;
+
+    margin-top: 3px;
+
+}
+
+
+.arrow-icon {
+
+    width: 18px;
+    height: 18px;
+
+    fill: none;
+
+    stroke: #777777;
+
+    stroke-width: 1.5;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+}
+
+
+/* ==========================================
+   HORIZONTAL SCROLL
+========================================== */
+
+.horizontal-scroll {
+
+    display: flex;
+
+    gap: 13px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+    padding-bottom: 3px;
+
+}
+
+
+.horizontal-scroll::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+/* ==========================================
+   BATCH CARD
+========================================== */
+
+.batch-card {
+
+    width: 250px;
+
+    min-width: 250px;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 19px;
+
+}
+
+
+.batch-image {
+
+    width: 100%;
+
+    height: 132px;
+
+    position: relative;
+
+    background: #ddd;
+
+}
+
+
+.batch-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.batch-tag {
+
+    position: absolute;
+
+    top: 10px;
+
+    left: 10px;
+
+    background: black;
+
+    color: white;
+
+    padding: 5px 8px;
+
+    border-radius: 6px;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.batch-info {
+
+    padding: 15px;
+
+}
+
+
+.batch-class {
+
+    font-size: 8px;
+
+    color: #999999;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 600;
+
+}
+
+
+.batch-info h3 {
+
+    margin-top: 5px;
+
+    font-size: 15px;
+
+}
+
+
+.batch-info p {
+
+    font-size: 9px;
+
+    color: #888888;
+
+    margin-top: 4px;
+
+}
+
+
+.batch-footer {
+
+    margin-top: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.batch-footer strong {
+
+    font-size: 13px;
+
+}
+
+
+.batch-footer button {
+
+    border: none;
+
+    background: black;
+
+    color: white;
+
+    border-radius: 8px;
+
+    padding: 7px 11px;
+
+    font-size: 9px;
+
+}
+
+
+/* ==========================================
+   BIG LAUNCH BANNER
+========================================== */
+
+.launch-section {
+
+    margin-top: 40px;
+
+}
+
+
+.launch-banner {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 8;
+
+    max-height: 340px;
+
+    min-height: 210px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: black;
+
+}
+
+
+.launch-banner img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.launch-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.82),
+            rgba(0,0,0,.30),
+            rgba(0,0,0,0)
+        );
+
+}
+
+
+.launch-overlay > span {
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    color: #cfcfcf;
+
+}
+
+
+.launch-overlay h2 {
+
+    font-size: clamp(23px, 5vw, 38px);
+
+    line-height: 1.1;
+
+    margin-top: 7px;
+
+}
+
+
+.launch-overlay p {
+
+    font-size: 10px;
+
+    color: #bdbdbd;
+
+    margin-top: 9px;
+
+    max-width: 310px;
+
+}
+
+
+.launch-overlay button {
+
+    width: fit-content;
+
+    border: none;
+
+    background: white;
+
+    color: black;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    margin-top: 15px;
+
+}
+
+
+/* ==========================================
+   START LEARNING
+========================================== */
+
+.learning-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.learning-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+}
+
+
+.learning-image {
+
+    width: 65px;
+    height: 65px;
+
+    min-width: 65px;
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    background: black;
+
+}
+
+
+.learning-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.learning-info {
+
+    flex: 1;
+
+}
+
+
+.learning-info span {
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    color: #999999;
+
+}
+
+
+.learning-info h3 {
+
+    font-size: 13px;
+
+    margin-top: 3px;
+
+}
+
+
+.learning-progress {
+
+    width: 100%;
+
+    height: 4px;
+
+    background: #eeeeee;
+
+    border-radius: 10px;
+
+    margin-top: 8px;
+
+    overflow: hidden;
+
+}
+
+
+.learning-progress div {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: black;
+
+}
+
+
+.learning-percent {
+
+    font-size: 9px;
+
+    color: #777777;
+
+    margin-top: 4px;
+
+}
+
+
+.learning-arrow {
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 10px;
+
+    background: black;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.learning-arrow svg {
+
+    width: 15px;
+    height: 15px;
+
+    fill: none;
+
+    stroke: white;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+}
+
+
+.no-learning {
+
+    background: black;
+
+    color: white;
+
+    border-radius: 19px;
+
+    padding: 24px 20px;
+
+}
+
+
+.no-learning span {
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #999999;
+
+}
+
+
+.no-learning h3 {
+
+    font-size: 18px;
+
+    margin-top: 7px;
+
+}
+
+
+.no-learning p {
+
+    color: #a8a8a8;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    margin-top: 6px;
+
+}
+
+
+.no-learning button {
+
+    border: none;
+
+    background: white;
+
+    color: black;
+
+    border-radius: 8px;
+
+    padding: 9px 14px;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    margin-top: 15px;
+
+}
+
+
+/* ==========================================
+   WHY ZENOVA
+========================================== */
+
+.why-section {
+
+    padding-top: 5px;
+
+}
+
+
+.why-section > h2 {
+
+    font-size: 31px;
+
+    line-height: 1.1;
+
+    margin-top: 8px;
+
+}
+
+
+.why-description {
+
+    font-size: 11px;
+
+    color: #777777;
+
+    line-height: 1.7;
+
+    margin-top: 12px;
+
+    max-width: 500px;
+
+}
+
+
+.difference-list {
+
+    margin-top: 24px;
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.difference-item {
+
+    display: flex;
+
+    gap: 15px;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.difference-number {
+
+    font-size: 10px;
+
+    color: #999999;
+
+    letter-spacing: 1px;
+
+    padding-top: 3px;
+
+}
+
+
+.difference-item strong {
+
+    font-size: 13px;
+
+}
+
+
+.difference-item p {
+
+    font-size: 9px;
+
+    color: #888888;
+
+    margin-top: 4px;
+
+    line-height: 1.5;
+
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.home-footer {
+
+    text-align: center;
+
+    padding: 55px 0 25px;
+
+}
+
+
+.footer-brand {
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+}
+
+
+.footer-sub {
+
+    font-size: 7px;
+
+    letter-spacing: 4px;
+
+    color: #999999;
+
+    margin-top: 5px;
+
+}
+
+
+.home-footer p {
+
+    font-size: 10px;
+
+    color: #999999;
+
+    margin-top: 12px;
+
+}
+
+
+.home-footer span {
+
+    display: block;
+
+    font-size: 8px;
+
+    color: #aaaaaa;
+
+    margin-top: 15px;
+
+}
+
+
+/* ==========================================
+   BOTTOM NAV
+========================================== */
+
+.bottom-nav {
+
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+    right: 0;
+
+    height: 76px;
+
+    background: rgba(255,255,255,.97);
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    z-index: 200;
+
+    backdrop-filter: blur(12px);
+
+}
+
+
+.nav-item {
+
+    border: none;
+
+    background: transparent;
+
+    color: #999999;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    font-size: 8px;
+
+    cursor: pointer;
+
+}
+
+
+.nav-item svg {
+
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.6;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+}
+
+
+.nav-item.active {
+
+    color: black;
+
+}
+
+
+.nav-item.active svg {
+
+    stroke-width: 2.2;
+
+}
+
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media (min-width: 700px) {
+
+    .top-header {
+
+        padding-left: 35px;
+        padding-right: 35px;
+
+    }
+
+
+    .main-content {
+
+        padding-left: 30px;
+        padding-right: 30px;
+
+    }
+
+
+    .quick-grid {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+    }
+
+
+    .bottom-nav {
+
+        width: 680px;
+
+        left: 50%;
+
+        right: auto;
+
+        transform: translateX(-50%);
+
+        border: 1px solid var(--border);
+
+        border-bottom: none;
+
+        border-radius: 18px 18px 0 0;
+
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .main-content {
+
+        padding-left: 14px;
+        padding-right: 14px;
+
+    }
+
+
+    .brand-name {
+
+        font-size: 22px;
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .hero-carousel {
+
+        min-height: 185px;
+
+    }
+
+
+    .hero-overlay {
+
+        padding: 19px;
+
+    }
+
+
+    .hero-text {
+
+        max-width: 75%;
+
+    }
+
+
+    .quick-card {
+
+        padding: 12px;
+
+    }
+
+
+    .quick-icon {
+
+        width: 42px;
+        height: 42px;
+
+        min-width: 42px;
+
+    }
+
+  }
