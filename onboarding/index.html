@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome | Zenova Educations</title>
+
+    <link rel="stylesheet" href="onboarding.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+    <main class="onboarding-container">
+
+        <!-- Progress -->
+        <div class="progress-area">
+
+            <div class="progress-track">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <p id="stepText">Step 1 of 2</p>
+
+        </div>
+
+
+        <!-- ==============================
+             STEP 1
+        =============================== -->
+
+        <section id="nameStep" class="step active">
+
+            <div class="brand">
+
+                <img
+                    src="../assets/images/logo.png"
+                    alt="Zenova Educations"
+                    class="logo"
+                >
+
+                <div class="brand-name">
+                    ZENOVA
+                </div>
+
+                <div class="brand-subtitle">
+                    EDUCATIONS
+                </div>
+
+            </div>
+
+
+            <div class="content">
+
+                <p class="eyebrow">
+                    WELCOME TO ZENOVA
+                </p>
+
+                <h1>
+                    What should we<br>
+                    call you?
+                </h1>
+
+                <p class="description">
+                    Enter your name to personalize your Zenova learning experience.
+                </p>
+
+
+                <div class="input-group">
+
+                    <label for="studentName">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        maxlength="60"
+                    >
+
+                    <p id="nameError" class="error-message"></p>
+
+                </div>
+
+
+                <button
+                    id="nameContinueBtn"
+                    class="primary-button"
+                >
+                    Continue
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             STEP 2
+        =============================== -->
+
+        <section id="classStep" class="step">
+
+            <div class="content class-content">
+
+                <p class="eyebrow">
+                    YOUR ACADEMICS
+                </p>
+
+                <h1>
+                    Which class are<br>
+                    you studying in?
+                </h1>
+
+                <p class="description">
+                    Select your current class to personalize your Zenova experience.
+                </p>
+
+
+                <div class="class-grid">
+
+                    <button class="class-card" data-class="Under 8">
+                        <span class="class-title">Under 8</span>
+                        <span class="class-subtitle">Foundation</span>
+                    </button>
+
+
+                    <button class="class-card" data-class="8th">
+                        <span class="class-title">8th</span>
+                        <span class="class-subtitle">Class 8</span>
+                    </button>
+
+
+                    <button class="class-card" data-class="9th">
+                        <span class="class-title">9th</span>
+                        <span class="class-subtitle">Class 9</span>
+                    </button>
+
+
+                    <button class="class-card" data-class="10th">
+                        <span class="class-title">10th</span>
+                        <span class="class-subtitle">SSLC</span>
+                    </button>
+
+
+                    <button class="class-card" data-class="1st PUC">
+                        <span class="class-title">1st PUC</span>
+                        <span class="class-subtitle">PUC 1</span>
+                    </button>
+
+
+                    <button class="class-card" data-class="2nd PUC">
+                        <span class="class-title">2nd PUC</span>
+                        <span class="class-subtitle">PUC 2</span>
+                    </button>
+
+                </div>
+
+
+                <p id="classError" class="error-message"></p>
+
+
+                <button
+                    id="classContinueBtn"
+                    class="primary-button"
+                    disabled
+                >
+                    Continue
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Loading -->
+
+        <div id="loadingOverlay" class="loading-overlay">
+
+            <div class="spinner"></div>
+
+            <p>Setting up your Zenova account...</p>
+
+        </div>
+
+
+    </main>
+
+
+    <script type="module" src="hsjsbheijsbs.js"></script>
+
+</body>
+
+</html>
