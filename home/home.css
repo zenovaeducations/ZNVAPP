@@ -1,0 +1,1359 @@
+/* ==========================================
+   ZENOVA EDUCATIONS
+   Universal Home
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --black: #000000;
+    --white: #ffffff;
+
+    --text: #111111;
+    --secondary: #777777;
+    --muted: #999999;
+
+    --background: #f8f8f8;
+
+    --border: #e5e5e5;
+
+    --light: #f1f1f1;
+
+}
+
+
+html {
+    font-size: 16px;
+}
+
+
+body {
+
+    width: 100%;
+    min-height: 100vh;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+/* ==========================================
+   APP
+========================================== */
+
+.app {
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding-bottom: 90px;
+
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.top-header {
+
+    width: 100%;
+    height: 92px;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 28px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 50;
+
+}
+
+
+.header-button {
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.brand {
+
+    text-align: center;
+
+    line-height: 1;
+
+}
+
+
+.brand-main {
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    letter-spacing: 6px;
+
+}
+
+
+.brand-sub {
+
+    margin-top: 8px;
+
+    font-size: 10px;
+
+    letter-spacing: 6px;
+
+    color: #bdbdbd;
+
+}
+
+
+.notification-button {
+
+    position: relative;
+
+    font-size: 30px;
+
+}
+
+
+.notification-dot {
+
+    width: 7px;
+    height: 7px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    top: 10px;
+    right: 9px;
+
+    display: none;
+
+}
+
+
+/* ==========================================
+   MAIN
+========================================== */
+
+.main-content {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 30px 22px 50px;
+
+}
+
+
+/* ==========================================
+   GREETING
+========================================== */
+
+.greeting-section {
+
+    margin-bottom: 24px;
+
+}
+
+
+.hello {
+
+    color: var(--secondary);
+
+    font-size: 16px;
+
+}
+
+
+.greeting-section h1 {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    margin-top: 2px;
+
+}
+
+
+.student-class {
+
+    color: var(--secondary);
+
+    margin-top: 4px;
+
+    font-size: 14px;
+
+}
+
+
+/* ==========================================
+   SEARCH
+========================================== */
+
+.search-section {
+
+    margin-bottom: 25px;
+
+}
+
+
+.search-box {
+
+    width: 100%;
+
+    height: 54px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    background: white;
+
+    color: #999999;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 18px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+}
+
+
+.search-icon {
+
+    color: #111111;
+
+    font-size: 24px;
+
+    line-height: 1;
+
+}
+
+
+/* ==========================================
+   HERO BANNER
+========================================== */
+
+.hero-section {
+
+    width: 100%;
+
+    margin-bottom: 35px;
+
+}
+
+
+.banner-container {
+
+    width: 100%;
+
+    height: 245px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: #000000;
+
+}
+
+
+.banner {
+
+    position: absolute;
+
+    inset: 0;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    transform: translateX(25px);
+
+    transition:
+
+        opacity .5s ease,
+
+        transform .5s ease;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.banner.active {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+
+.banner:nth-child(1) {
+
+    background:
+        linear-gradient(
+            110deg,
+            #000000 0%,
+            #191919 60%,
+            #303030 100%
+        );
+
+}
+
+
+.banner:nth-child(2) {
+
+    background:
+        linear-gradient(
+            110deg,
+            #151515 0%,
+            #000000 70%
+        );
+
+}
+
+
+.banner:nth-child(3) {
+
+    background:
+        linear-gradient(
+            110deg,
+            #000000 0%,
+            #252525 100%
+        );
+
+}
+
+
+.banner-content {
+
+    max-width: 500px;
+
+    color: white;
+
+}
+
+
+.banner-label {
+
+    display: inline-block;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    color: #bbbbbb;
+
+    margin-bottom: 12px;
+
+}
+
+
+.banner h2 {
+
+    font-size: 29px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+}
+
+
+.banner p {
+
+    color: #bbbbbb;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin-top: 10px;
+
+    max-width: 350px;
+
+}
+
+
+.banner-button {
+
+    margin-top: 17px;
+
+    border: none;
+
+    background: white;
+
+    color: black;
+
+    border-radius: 10px;
+
+    padding: 10px 16px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+.banner-dots {
+
+    position: absolute;
+
+    left: 30px;
+
+    bottom: 18px;
+
+    display: flex;
+
+    gap: 6px;
+
+    z-index: 5;
+
+}
+
+
+.banner-dot {
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #777777;
+
+    padding: 0;
+
+    cursor: pointer;
+
+}
+
+
+.banner-dot.active {
+
+    width: 22px;
+
+    border-radius: 20px;
+
+    background: white;
+
+}
+
+
+/* ==========================================
+   SECTION
+========================================== */
+
+.section {
+
+    margin-top: 38px;
+
+}
+
+
+.section-title-row {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 16px;
+
+}
+
+
+.section-label {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    color: #999999;
+
+}
+
+
+.section-title {
+
+    margin-top: 4px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    letter-spacing: -.5px;
+
+}
+
+
+.view-all {
+
+    border: none;
+
+    background: transparent;
+
+    color: #555555;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+}
+
+
+/* ==========================================
+   QUICK ACTIONS
+========================================== */
+
+.quick-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.quick-card {
+
+    min-height: 105px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
+}
+
+
+.quick-card:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+.quick-icon {
+
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+
+    border-radius: 15px;
+
+    background: black;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 21px;
+
+}
+
+
+.quick-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.quick-text strong {
+
+    font-size: 14px;
+
+}
+
+
+.quick-text span {
+
+    font-size: 10px;
+
+    color: #999999;
+
+}
+
+
+/* ==========================================
+   ANNOUNCEMENT
+========================================== */
+
+.announcement-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.announcement-icon {
+
+    width: 48px;
+    height: 48px;
+
+    min-width: 48px;
+
+    border-radius: 14px;
+
+    background: black;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 19px;
+
+}
+
+
+.announcement-content {
+
+    flex: 1;
+
+}
+
+
+.announcement-tag {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #999999;
+
+}
+
+
+.announcement-content h3 {
+
+    margin-top: 3px;
+
+    font-size: 14px;
+
+}
+
+
+.announcement-content p {
+
+    margin-top: 3px;
+
+    color: #888888;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+}
+
+
+.announcement-arrow {
+
+    color: #777777;
+
+    font-size: 20px;
+
+}
+
+
+/* ==========================================
+   RESULTS
+========================================== */
+
+.results-scroll {
+
+    display: flex;
+
+    gap: 12px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+}
+
+
+.results-scroll::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+.result-card {
+
+    min-width: 160px;
+
+    background: black;
+
+    color: white;
+
+    border-radius: 20px;
+
+    padding: 22px;
+
+}
+
+
+.result-value {
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+}
+
+
+.result-title {
+
+    font-size: 11px;
+
+    margin-top: 7px;
+
+}
+
+
+.result-sub {
+
+    color: #999999;
+
+    font-size: 10px;
+
+    margin-top: 3px;
+
+}
+
+
+/* ==========================================
+   BATCHES
+========================================== */
+
+.batch-scroll {
+
+    display: flex;
+
+    gap: 14px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+}
+
+
+.batch-scroll::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+.batch-card {
+
+    min-width: 245px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.batch-image {
+
+    height: 125px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+}
+
+
+.batch-one {
+
+    background: #111111;
+
+}
+
+
+.batch-two {
+
+    background: #303030;
+
+}
+
+
+.batch-image span {
+
+    color: white;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+}
+
+
+.batch-info {
+
+    padding: 17px;
+
+}
+
+
+.batch-category {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #999999;
+
+    font-weight: 600;
+
+}
+
+
+.batch-info h3 {
+
+    font-size: 16px;
+
+    margin-top: 5px;
+
+}
+
+
+.batch-info p {
+
+    color: #888888;
+
+    font-size: 10px;
+
+    margin-top: 5px;
+
+}
+
+
+.batch-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 17px;
+
+}
+
+
+.batch-bottom strong {
+
+    font-size: 14px;
+
+}
+
+
+.batch-bottom button {
+
+    border: none;
+
+    background: black;
+
+    color: white;
+
+    border-radius: 8px;
+
+    padding: 8px 11px;
+
+    font-size: 10px;
+
+}
+
+
+/* ==========================================
+   FREE LEARNING
+========================================== */
+
+.free-card {
+
+    background: black;
+
+    color: white;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.free-play {
+
+    width: 50px;
+    height: 50px;
+
+    min-width: 50px;
+
+    border-radius: 15px;
+
+    background: white;
+
+    color: black;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.free-card span {
+
+    color: #999999;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.free-card h3 {
+
+    font-size: 14px;
+
+    margin-top: 4px;
+
+}
+
+
+.free-card p {
+
+    color: #999999;
+
+    font-size: 10px;
+
+    margin-top: 4px;
+
+}
+
+
+.free-arrow {
+
+    margin-left: auto;
+
+    color: white !important;
+
+    font-size: 20px !important;
+
+}
+
+
+/* ==========================================
+   WHY ZENOVA
+========================================== */
+
+.why-section {
+
+    padding: 30px 0 20px;
+
+}
+
+
+.why-section .section-title {
+
+    font-size: 29px;
+
+    line-height: 1.15;
+
+    margin-top: 8px;
+
+}
+
+
+.why-list {
+
+    margin-top: 24px;
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.why-item {
+
+    display: flex;
+
+    gap: 13px;
+
+    align-items: center;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.why-item span {
+
+    width: 30px;
+    height: 30px;
+
+    background: black;
+
+    color: white;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 12px;
+
+}
+
+
+.why-item p {
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+}
+
+
+/* ==========================================
+   BOTTOM NAVIGATION
+========================================== */
+
+.bottom-nav {
+
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 78px;
+
+    background: rgba(255, 255, 255, .97);
+
+    border-top: 1px solid #e5e5e5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    z-index: 100;
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+.nav-item {
+
+    border: none;
+
+    background: transparent;
+
+    color: #999999;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    min-width: 58px;
+
+    cursor: pointer;
+
+    font-size: 9px;
+
+}
+
+
+.nav-icon {
+
+    font-size: 22px;
+
+    line-height: 1;
+
+}
+
+
+.nav-item.active {
+
+    color: black;
+
+}
+
+
+.nav-item.active .nav-icon {
+
+    font-weight: 700;
+
+}
+
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media (min-width: 700px) {
+
+    .main-content {
+
+        padding-left: 30px;
+
+        padding-right: 30px;
+
+    }
+
+
+    .bottom-nav {
+
+        max-width: 700px;
+
+        left: 50%;
+
+        right: auto;
+
+        transform: translateX(-50%);
+
+        border: 1px solid var(--border);
+
+        border-bottom: none;
+
+        border-radius: 20px 20px 0 0;
+
+    }
+
+
+    .quick-grid {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+    }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+    .top-header {
+
+        padding: 0 18px;
+
+    }
+
+
+    .brand-main {
+
+        font-size: 24px;
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .brand-sub {
+
+        font-size: 8px;
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .main-content {
+
+        padding-left: 16px;
+
+        padding-right: 16px;
+
+    }
+
+
+    .banner-container {
+
+        height: 225px;
+
+    }
+
+
+    .banner h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .quick-card {
+
+        padding: 12px;
+
+    }
+
+
+    .quick-icon {
+
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+
+    }
+
+      }
