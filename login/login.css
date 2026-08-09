@@ -182,11 +182,11 @@ body{
 
 /* ========================= */
 
-.google-btn svg{
-
-    width:24px;
-    height:24px;
-
+.google-btn img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 /* ========================= */
