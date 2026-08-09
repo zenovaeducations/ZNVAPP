@@ -15,13 +15,13 @@ import { getStorage } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-s
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAcqxS2SIpMyaY-jYOz0Y-t67Taa04Fy1o",
-  authDomain: "zenova-educations.firebaseapp.com",
-  projectId: "zenova-educations",
-  storageBucket: "zenova-educations.firebasestorage.app",
-  messagingSenderId: "66782392979",
-  appId: "1:66782392979:web:ce1cf80afe1c67734f5366",
-  measurementId: "G-9JND0JB1T4"
+  apiKey: "AIzaSyDeO4bUhJ2kScQ7ZbEYwSlfH8Uk5qpGBIo",
+  authDomain: "znvapp-2a26f.firebaseapp.com",
+  projectId: "znvapp-2a26f",
+  storageBucket: "znvapp-2a26f.firebasestorage.app",
+  messagingSenderId: "391066000827",
+  appId: "1:391066000827:web:9dda02a3464176af2ff89e",
+  measurementId: "G-EJFSZLTHML"
 };
 
 const app = initializeApp(firebaseConfig);
