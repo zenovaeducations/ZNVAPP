@@ -59,7 +59,7 @@ googleLoginBtn.addEventListener("click", async () => {
 
             case "approved":
 
-                window.location.href = "../dashboard/";
+                window.location.href = "../home/";
                 break;
 
             case "pending":
